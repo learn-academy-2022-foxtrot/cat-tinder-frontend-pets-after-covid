@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
   return (
-    <div>Card</div>
+    <div>
+        <p>name {props.name}</p>
+        <p>age {props.age}</p>
+        <p>enjoys {props.enjoys}</p>
+        <p>image {props.image}</p>
+    </div>
   )
 }
 
