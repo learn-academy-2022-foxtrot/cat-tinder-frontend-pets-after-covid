@@ -10,6 +10,7 @@ import PetNew from "./pages/PetNew";
 import PetEdit from "./pages/PetEdit";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import "./App.css";
 
 const App = () => {
   return (
