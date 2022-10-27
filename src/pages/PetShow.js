@@ -1,23 +1,9 @@
 import React from "react";
-import Card from "../components/Card";
+import PetCard from "../components/PetCard";
 import mockPets from "../mockPets";
 
 const PetShow = () => {
-  return (
-    <div>
-      Pet Show!
-      {mockPets.map((object) => {
-        return (
-          <Card
-            name={object.name}
-            age={object.age}
-            enjoys={object.enjoys}
-            image={object.image}
-          />
-        );
-      })}
-    </div>
-  );
+  return <div>{/* <Card name={mockPets[].name}/> */}</div>;
 };
 
 export default PetShow;
