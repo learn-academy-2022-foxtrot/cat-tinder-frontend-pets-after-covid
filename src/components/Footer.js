@@ -1,4 +1,6 @@
 import React from "react";
+import "../App.css";
+
 import {
   Collapse,
   Navbar,
@@ -17,7 +19,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <Navbar color="info" full="false">
+      <Navbar fixed="bottom" className="navbar-custom-footer">
         &copy; Matthew and Ari 2022
       </Navbar>
     </>

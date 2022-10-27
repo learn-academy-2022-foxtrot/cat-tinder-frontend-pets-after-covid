@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../App.css";
 import {
   Collapse,
   Navbar,
@@ -24,37 +25,35 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar color="info" full="false">
-        <NavbarBrand href="/">Home</NavbarBrand>
-        <NavbarBrand href="/petnew">Add Pet</NavbarBrand>
-        <NavbarBrand href="/petindex">All Pets</NavbarBrand>
-        <NavbarBrand href="/petedit">Edit Pet</NavbarBrand>
-        <NavbarBrand href="/">Find Your PAC</NavbarBrand>
-        {/* <NavbarToggler onClick={toggle} />
+      <Navbar expand="md" container="sm" className="navbar-custom" full="false">
+        <NavbarBrand className="" href="/">
+          <ion-icon name="heart-circle-outline"></ion-icon>
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
+          <Nav pills={true} className="ms-auto" navbar>
+            <NavItem className="navitem-custom">
+              <NavLink className="navlink-custom" href="/petnew">
+                Add Pet
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavItem className="navitem-custom">
+              <NavLink className="navlink-custom" href="/petindex">
+                All Pets
+              </NavLink>
+            </NavItem>
+            <NavItem className="navitem-custom">
+              <NavLink className="navlink-custom" href="/petedit">
+                Edit Pet
+              </NavLink>
+            </NavItem>
+            <NavItem className="navitem-custom">
+              <NavLink className="navlink-custom" href="/">
+                Find Your PAC
+              </NavLink>
+            </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse> */}
+        </Collapse>
       </Navbar>
     </div>
   );
