@@ -5,10 +5,10 @@
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
 
   - Font Weights:
-  Light: 200
+  Extra-Light: 200
+  Light: 300
   Regular: 400
-  Semi-Bold: 600
-  Bold: 800
+  Bold: 600
 
   ------------- 05 WHITESPACE
 - Spacing System(px)
@@ -16,12 +16,23 @@
 
 */
 
+.header-primary {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+h1 span {
+  color: #358bed;
+  text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 ion-icon {
@@ -30,35 +41,59 @@ ion-icon {
   filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.5));
 }
 
-.navitem-custom {
-  padding: 0.1rem 0.5rem;
-  background-color: #de7474;
-  /* border: 2px solid #c14949; */
-  border-radius: 5px;
-  font-weight: 600;
-}
-
-.navlink-custom {
+.link {
   color: #fff !important;
-  font-size: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  /* background-color: rgb(245, 45, 45); */
+  font-size: 1.6rem;
+  text-decoration: none !important;
+  text-transform: capitalize;
 }
 
-.navitem-custom {
-  margin-right: 1rem !important;
+.link:before {
+  content: "";
 }
 
-.navbar-custom {
-  height: 6.2rem;
-  font-size: 1.8rem !important;
-  background-color: #d65151;
-  box-shadow: 0 3px 7px -2px rgba(0, 0, 0, 0.3);
+.link:hover {
+  text-decoration: none;
+  transition: all 0.2s;
+  background-color: rgb(221, 140, 140);
 }
 
-.navbar-custom-footer {
-  font-size: 1.2rem;
-  background-color: #d65151;
-  height: 6.2rem;
+.hero-container {
+  margin-top: -6.2rem;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url(./assets/img/header-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-flex {
+  margin-left: 4.2rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-text {
+  margin-top: 18rem;
+}
+p {
+  font-size: 1.8rem;
   color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px #000;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
 }
