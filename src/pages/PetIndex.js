@@ -4,9 +4,10 @@ import PetCard from "../components/PetCard";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-const PetIndex = () => {
+const PetIndex = ({pets}) => {
   return (
     <>
+    <h1>Find Your #PACmates!</h1>
       <Grid
         container
         rowSpacing={1}
@@ -18,14 +19,10 @@ const PetIndex = () => {
           margin: "0 auto",
         }}
       >
-        {mockPets.map((object) => {
+        {pets?.map((object, index) => {
           return (
             <Grid item>
-              <PetCard
-                name={object.name}
-                age={object.age}
-                enjoys={object.enjoys}
-                image={object.image}
+              <PetCard object={object} key={object.id}
               />
             </Grid>
           );
