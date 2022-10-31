@@ -10,20 +10,19 @@ import PetNew from "./pages/PetNew";
 import PetEdit from "./pages/PetEdit";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import PetCard from "./components/PetCard";
 import "./App.css";
 
 const App = () => {
-  const [pets, setPets] = useState(mockPets) 
+  const [pets, setPets] = useState(mockPets);
   return (
     <>
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/petindex" element={<PetIndex pets={pets}/>} />
-        <Route path="/petshow/:id" element={<PetShow pets={pets}/>} />
+        <Route path="/petindex" element={<PetIndex pets={pets} />} />
+        <Route path="/petshow/:id" element={<PetShow pets={pets} />} />
         <Route path="/petnew" element={<PetNew />} />
-        <Route path="/petedit" element={<PetEdit pets={pets}/>} />
+        <Route path="/petedit" element={<PetEdit pets={pets} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

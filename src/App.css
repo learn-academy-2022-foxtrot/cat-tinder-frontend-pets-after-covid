@@ -16,12 +16,6 @@
 
 */
 
-.header-primary {
-  font-size: 6.2rem;
-  font-weight: 600;
-  color: #fff;
-}
-
 h1 span {
   color: #358bed;
   text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(0, 0, 0, 0.15);
@@ -35,17 +29,28 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
-ion-icon {
-  font-size: 4rem;
+.header-primary {
+  font-size: 6.2rem;
+  font-weight: 600;
   color: #fff;
-  filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.5));
 }
+
+.margin-bottom-md {
+  margin-bottom: 3.2rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* ////////////////////////////////////////////// */
+/* /////////// Header ///////////*/
+/* ////////////////////////////////////////////// */
 
 .link {
   color: #fff !important;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  /* background-color: rgb(245, 45, 45); */
   font-size: 1.6rem;
   text-decoration: none !important;
   text-transform: capitalize;
@@ -60,6 +65,35 @@ ion-icon {
   transition: all 0.2s;
   background-color: rgb(221, 140, 140);
 }
+
+/* ////////////////////////////////////////////// */
+/* /////////// FOOTER ///////////*/
+/* ////////////////////////////////////////////// */
+
+.footer {
+  background-color: #1976d2;
+  margin-top: 3.2rem;
+}
+
+.footer p {
+  font-weight: 200;
+  font-size: 1.4rem;
+  text-shadow: none;
+  margin-bottom: 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #000032;
+}
+
+/* ////////////////////////////////////////////// */
+/* /////////// HERO ///////////*/
+/* ////////////////////////////////////////////// */
 
 .hero-container {
   margin-top: -6.2rem;
@@ -96,4 +130,48 @@ p {
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
+}
+
+/* ////////////////////////////////////////////// */
+/* /////////// CARDS ///////////*/
+/* ////////////////////////////////////////////// */
+
+.card-text {
+  font-size: 1.4rem !important;
+  text-shadow: none;
+  color: #000032;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-text-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pet-desc-text {
+  color: #01011f;
+  text-shadow: none;
+  font-weight: 200;
+  font-size: 2.4rem;
+}
+
+.pet-enjoys-text {
+  color: #01011f;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+.show-card-wrapper {
+  padding: 1.4rem;
+  background-color: rgba(53, 139, 237, 0.781);
+  border-radius: 5px;
 }

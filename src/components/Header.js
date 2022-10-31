@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "@mui/material/Link";
-import PetsIcon from "@mui/icons-material/Pets";
+import PAC from "../assets/img/PAC.svg";
 
 const pages = [
   <Link className="link" href="/petindex">
@@ -56,7 +56,7 @@ const Header = () => {
             className="header-icon"
             href="/"
           >
-            <ion-icon name="fitness-outline"></ion-icon>
+            <img src={PAC} height="50rem" width="50rem" className="pac-svg" />
           </Link>
           <Typography
             variant="h6"
@@ -66,14 +66,15 @@ const Header = () => {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
+              fontFamily: "Poppins",
+              fontWeight: 600,
+              fontSize: "1.2rem",
+              letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            PAC
+            P.A.C
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -113,7 +114,7 @@ const Header = () => {
             </Menu>
           </Box>
           <Link sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <ion-icon name="fitness-outline"></ion-icon>v
+            <img src={PAC} height="50rem" width="50rem" className="pac-svg" />
           </Link>
           <Typography
             variant="h5"
@@ -124,14 +125,15 @@ const Header = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
+              fontFamily: "Poppins",
+              fontWeight: 600,
+              fontSize: "1.2rem",
+              letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            PAC
+            P.A.C
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
