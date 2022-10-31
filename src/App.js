@@ -13,6 +13,9 @@ import NotFound from "./pages/NotFound";
 import "./App.css";
 
 const App = () => {
+  const createPet = (pet) => {
+    console.log(pet);
+  };
   const [pets, setPets] = useState(mockPets);
   return (
     <>
@@ -21,7 +24,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/petindex" element={<PetIndex pets={pets} />} />
         <Route path="/petshow/:id" element={<PetShow pets={pets} />} />
-        <Route path="/petnew" element={<PetNew />} />
+        <Route path="/petnew" element={<PetNew createPet={createPet} />} />
         <Route path="/petedit" element={<PetEdit pets={pets} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
