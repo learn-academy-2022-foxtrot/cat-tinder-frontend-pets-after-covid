@@ -33,7 +33,7 @@ const PetIndex = ({ pets }) => {
                   component="img"
                   alt="`An image of your pet."
                   maxHeight="140"
-                  image={pet.image}
+                  image={pet?.image}
                 />
                 <div className="card-flex">
                   <CardContent sx={{ textAlign: "center", height: "9rem" }}>
@@ -49,7 +49,7 @@ const PetIndex = ({ pets }) => {
                         }}
                       >
                         Name:
-                        <p className="pet-desc-text">{pet.name}</p>
+                        <p className="pet-desc-text">{pet?.name}</p>
                       </Typography>
                       <Typography
                         gutterBottom
@@ -62,7 +62,7 @@ const PetIndex = ({ pets }) => {
                         }}
                       >
                         Age:
-                        <p className="pet-desc-text">{pet.age}</p>
+                        <p className="pet-desc-text">{pet?.age}</p>
                       </Typography>
                     </div>
                   </CardContent>
@@ -70,7 +70,7 @@ const PetIndex = ({ pets }) => {
                     className="btn"
                     variant="contained"
                     size="large"
-                    href={`/petshow/${pet.id}`}
+                    href={`/petshow/${pet?.id}`}
                   >
                     See Pet
                   </Button>
