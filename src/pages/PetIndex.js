@@ -24,10 +24,10 @@ const PetIndex = ({ pets }) => {
           margin: "0 auto",
         }}
       >
-        {pets?.map((pet) => {
+        {pets?.map((pet, index) => {
           return (
-            <Grid item>
-              <Card key={pet.id} sx={{ maxWidth: "34.5rem", height: "55rem" }}>
+            <Grid item key={index}>
+              <Card sx={{ maxWidth: "34.5rem", height: "55rem" }}>
                 <CardMedia
                   sx={{ height: "40rem", width: "34.5rem" }}
                   component="img"

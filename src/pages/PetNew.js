@@ -83,7 +83,6 @@ const PetNew = ({ createPet }) => {
                     label="Age"
                     placeholder="How old is your pet?"
                     type="number"
-                    inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                   />
                 </Grid>
                 <Grid item xs={8}>
