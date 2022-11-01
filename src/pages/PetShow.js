@@ -15,7 +15,7 @@ const PetShow = ({ pets }) => {
   let currentPet = pets?.find((pet) => pet?.id === +id);
   return (
     <>
-      <h1>#PAC Member: {currentPet.name}</h1>
+      <h1>#PAC Member: {currentPet?.name}</h1>
       {currentPet && (
         <>
           <Grid
