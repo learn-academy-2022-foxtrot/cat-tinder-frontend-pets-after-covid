@@ -1,6 +1,6 @@
 import React from "react";
 import mockPets from "./mockPets";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -13,10 +13,50 @@ import NotFound from "./pages/NotFound";
 import "./App.css";
 
 const App = () => {
+
+
+  const [pets, setPets] = useState([])
+
+  useEffect(() => {
+    readPet()
+  }, [])
+
+  const readPet = () => {
+    fetch("http://localhost:3000/pets")
+    .then((response) => response.json())
+    .then((payload) => {
+     setPets(payload)
+    })
+    .catch((error) => console.log(error))
+  }
+
   const createPet = (pet) => {
-    console.log(pet);
-  };
-  const [pets, setPets] = useState(mockPets);
+    fetch("http://localhost:3000/pets", {
+    body: JSON.stringify(pet),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "POST"
+    })
+    .then((response) => response.json())
+    .then((payload) => readPet())
+    .catch((errors) => console.log("Pet create errors:", errors))
+  }
+  const updatePet = (cat, id) => {
+  fetch(`http://localhost:3000/pets/${id}`, {
+    // converting an object to a string
+    body: JSON.stringify(pets),
+    // specify the info being sent in JSON and the info returning should be JSON
+    headers: {
+      "Content-Type": "application/json"
+    },
+    // HTTP verb so the correct endpoint is invoked on the server
+    method: "PATCH"
+  })
+    .then((response) => response.json())
+    .then((payload) => readPet())
+    .catch((errors) => console.log("Pet update errors:", errors))
+}
   return (
     <>
       <Header />

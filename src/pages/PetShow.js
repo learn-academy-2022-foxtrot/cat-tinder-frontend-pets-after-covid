@@ -12,10 +12,10 @@ import Grid from "@mui/material/Grid";
 
 const PetShow = ({ pets }) => {
   const { id } = useParams();
-  let currentPet = pets?.find((pet) => pet.id === +id);
+  let currentPet = pets?.find((pet) => pet?.id === +id);
   return (
     <>
-      <h1>#PAC Member: {currentPet.name}</h1>
+      <h1>#PAC Member: {currentPet?.name}</h1>
       {currentPet && (
         <>
           <Grid
@@ -33,7 +33,7 @@ const PetShow = ({ pets }) => {
           >
             <div className="show-card-wrapper">
               <Card
-                key={currentPet.id}
+                key={currentPet?.id}
                 sx={{ maxWidth: "34.5rem", height: "65rem" }}
               >
                 <CardMedia
@@ -41,7 +41,7 @@ const PetShow = ({ pets }) => {
                   component="img"
                   alt="`An image of your pet."
                   maxHeight="140"
-                  image={currentPet.image}
+                  image={currentPet?.image}
                 />
                 <div className="card-flex">
                   <CardContent
@@ -62,7 +62,7 @@ const PetShow = ({ pets }) => {
                         }}
                       >
                         Name:
-                        <p className="pet-desc-text">{currentPet.name}</p>
+                        <p className="pet-desc-text">{currentPet?.name}</p>
                       </Typography>
                       <Typography
                         gutterBottom
@@ -75,7 +75,7 @@ const PetShow = ({ pets }) => {
                         }}
                       >
                         Age:
-                        <p className="pet-desc-text">{currentPet.age}</p>
+                        <p className="pet-desc-text">{currentPet?.age}</p>
                       </Typography>
                     </div>
                     <Typography
@@ -87,7 +87,7 @@ const PetShow = ({ pets }) => {
                       }}
                     >
                       Enjoys:
-                      <p className="pet-enjoys-text">{currentPet.enjoys}</p>
+                      <p className="pet-enjoys-text">{currentPet?.enjoys}</p>
                     </Typography>
                   </CardContent>
                   <Button
